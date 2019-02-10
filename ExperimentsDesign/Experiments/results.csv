@@ -1,4 +1,4 @@
-Sorting algorithm,Data type,Values state,Array size,Time
+Sorting algorithm,Data type,Values state,Array size,Time (ms)
 Selection sort,Int 32,Not ordered,100,0
 Selection sort,Int 32,Not ordered,1000,0
 Selection sort,Int 32,Not ordered,10000,0
