@@ -149,5 +149,14 @@ namespace Experiments.Model
 
         }
 
+        public override string ToString()
+        {
+            string[] sort = new string[] { "", "Selection sort", "Insertion sort" };
+            string[] type = new string[] { "", "Int 32", "String", "Double", "Int 64" };
+            string[] state = new string[] { "", "Not ordered", "Ascending order", "Descending order" };
+
+            return sort[this.algorithm] + "," + type[this.datatype] + "," + state[this.state] + "," + SIZES[this.length];
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Experiments.Model
@@ -16,10 +17,6 @@ namespace Experiments.Model
             InitTests();
         }
 
-        public void ExecuteExperiment()
-        {
-
-        }
 
         public void InitTests()
         {
@@ -36,9 +33,10 @@ namespace Experiments.Model
                 {
                     sum = 1;
                     treatment[i] = 1;
-                } else
+                }
+                else
                 {
-                    treatment[i]+=sum;
+                    treatment[i] += sum;
                     sum = 0;
                 }
             }
@@ -88,7 +86,7 @@ namespace Experiments.Model
             int[] array = new int[4];
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                for (int j = 0; j < 4; j++)
+                for (int j = 0; j < matrix.GetLength(1); j++)
                 {
                     array[j] = matrix[i, j];
                 }
@@ -97,19 +95,25 @@ namespace Experiments.Model
             }
         }
 
-        public void ExecuteTreatment(Treatment test)
-        {
-            long time = test.ExecuteTest();
-        }
-
         public void WriteCSV()
         {
+            try
+            {
 
+                StreamWriter sw = new StreamWriter("..\\..\\results.csv", false);
+                sw.WriteLine("Sorting algorithm,Data type,Values state,Array size,Time (ms)");
+                foreach (Treatment treatment in treatments)
+                {
+                    sw.WriteLine(treatment.ToString() + "," + treatment.ExecuteTest());
+                }
+
+                sw.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
         }
-
-
-
-
 
     }
 }

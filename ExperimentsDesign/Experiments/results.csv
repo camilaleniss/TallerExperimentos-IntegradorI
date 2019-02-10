@@ -1,0 +1,73 @@
+Sorting algorithm,Data type,Values state,Array size,Time
+Selection sort,Int 32,Not ordered,100,0
+Selection sort,Int 32,Not ordered,1000,0
+Selection sort,Int 32,Not ordered,10000,0
+Selection sort,Int 32,Ascending order,100,0
+Selection sort,Int 32,Ascending order,1000,0
+Selection sort,Int 32,Ascending order,10000,0
+Selection sort,Int 32,Descending order,100,0
+Selection sort,Int 32,Descending order,1000,0
+Selection sort,Int 32,Descending order,10000,0
+Selection sort,String,Not ordered,100,0
+Selection sort,String,Not ordered,1000,0
+Selection sort,String,Not ordered,10000,0
+Selection sort,String,Ascending order,100,0
+Selection sort,String,Ascending order,1000,0
+Selection sort,String,Ascending order,10000,0
+Selection sort,String,Descending order,100,0
+Selection sort,String,Descending order,1000,0
+Selection sort,String,Descending order,10000,0
+Selection sort,Double,Not ordered,100,0
+Selection sort,Double,Not ordered,1000,0
+Selection sort,Double,Not ordered,10000,0
+Selection sort,Double,Ascending order,100,0
+Selection sort,Double,Ascending order,1000,0
+Selection sort,Double,Ascending order,10000,0
+Selection sort,Double,Descending order,100,0
+Selection sort,Double,Descending order,1000,0
+Selection sort,Double,Descending order,10000,0
+Selection sort,Int 64,Not ordered,100,0
+Selection sort,Int 64,Not ordered,1000,0
+Selection sort,Int 64,Not ordered,10000,0
+Selection sort,Int 64,Ascending order,100,0
+Selection sort,Int 64,Ascending order,1000,0
+Selection sort,Int 64,Ascending order,10000,0
+Selection sort,Int 64,Descending order,100,0
+Selection sort,Int 64,Descending order,1000,0
+Selection sort,Int 64,Descending order,10000,0
+Insertion sort,Int 32,Not ordered,100,0
+Insertion sort,Int 32,Not ordered,1000,0
+Insertion sort,Int 32,Not ordered,10000,0
+Insertion sort,Int 32,Ascending order,100,0
+Insertion sort,Int 32,Ascending order,1000,0
+Insertion sort,Int 32,Ascending order,10000,0
+Insertion sort,Int 32,Descending order,100,0
+Insertion sort,Int 32,Descending order,1000,0
+Insertion sort,Int 32,Descending order,10000,0
+Insertion sort,String,Not ordered,100,0
+Insertion sort,String,Not ordered,1000,0
+Insertion sort,String,Not ordered,10000,0
+Insertion sort,String,Ascending order,100,0
+Insertion sort,String,Ascending order,1000,0
+Insertion sort,String,Ascending order,10000,0
+Insertion sort,String,Descending order,100,0
+Insertion sort,String,Descending order,1000,0
+Insertion sort,String,Descending order,10000,0
+Insertion sort,Double,Not ordered,100,0
+Insertion sort,Double,Not ordered,1000,0
+Insertion sort,Double,Not ordered,10000,0
+Insertion sort,Double,Ascending order,100,0
+Insertion sort,Double,Ascending order,1000,0
+Insertion sort,Double,Ascending order,10000,0
+Insertion sort,Double,Descending order,100,0
+Insertion sort,Double,Descending order,1000,0
+Insertion sort,Double,Descending order,10000,0
+Insertion sort,Int 64,Not ordered,100,0
+Insertion sort,Int 64,Not ordered,1000,0
+Insertion sort,Int 64,Not ordered,10000,0
+Insertion sort,Int 64,Ascending order,100,0
+Insertion sort,Int 64,Ascending order,1000,0
+Insertion sort,Int 64,Ascending order,10000,0
+Insertion sort,Int 64,Descending order,100,0
+Insertion sort,Int 64,Descending order,1000,0
+Insertion sort,Int 64,Descending order,10000,0
