@@ -33,7 +33,7 @@ namespace Experiments.Model
         private int length;
         private long time;
 
-        private IList array;
+        private dynamic array;
 
 
         public Treatment(int [] values)
@@ -52,19 +52,19 @@ namespace Experiments.Model
             switch(datatype)
             {
                 case INT_32:
-                    array = new int[SIZES[length]];
+                    array = new List<Int32>();
                     break;
 
                 case STRING:
-                    array = new string[SIZES[length]];
+                    array = new List<String>();
                     break;
 
                 case DOUBLE:
-                    array = new double[SIZES[length]];
+                    array = new List<Double>();
                     break;
 
                 case INT_64:
-                    array = new long[SIZES[length]];
+                    array = new List<Int64>();
                     break;
             }            
         }
@@ -73,7 +73,7 @@ namespace Experiments.Model
         {
             for (int i = 0; i < array.Count; i++)
             {
-                switch (datatype)
+                switch (SIZES[length])
                 {
                     case INT_32:
                         array[i] = random.Next(MIN_INT, MAX_INT);
@@ -91,6 +91,19 @@ namespace Experiments.Model
                         array[i] = (long)random.Next(MIN_INT, MAX_INT);
                         break;
                 }
+            }
+
+            switch (state)
+            {
+                case NOT_ORDERED:
+                    break;
+                case ASCENDING_ORDER:
+                    array.Sort();
+                    break;
+                case DESCENDING_ORDER:
+                    array.Sort();
+                    array.Reverse();
+                    break;
             }
         }
 
