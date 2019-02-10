@@ -1,14 +1,39 @@
-﻿using System;
+﻿using ExperimentsDesign.Model;
+using System;
+using System.IO;
 
 namespace ExperimentsDesign
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static Experiment exp;
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-        }
-
+            exp = new Experiment();
+            int[,] matrix = exp.InitMatrixTests();
+            string ruta = "..\\..\\respond.txt";
+            writeRespuesta(matrix, ruta);
+        }   
         
+        public static void writeRespuesta(int [,] matrix, string ruta)
+        {
+            try
+            {
+                StreamWriter sw = new StreamWriter(ruta , true);
+                for (int f = 0; f < matrix.GetLength(0); f++)
+                {
+                    for (int c = 0; c < matrix.GetLength(1); c++)
+                    {
+                        sw.Write(matrix[f, c] + " ");
+                    }
+                    sw.WriteLine("");
+                }
+                sw.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
+        }
     }
 }

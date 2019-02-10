@@ -4,21 +4,22 @@ using System.Text;
 
 namespace ExperimentsDesign.Model
 {
+    /*
     public const int LEN1 = 10;
     public const int LEN2 = 100;
     public const int LEN3 = 1000;
-
-    public class Test<T>
+    */
+    public class Treatment
     {
         private int Algorithm { get; set; }
         private int Datatype {get; set; }
         private int State {get; set; }
         private int Length { get; set; }
-        private T[] Array { get; set; }
+        //private T[] Array { get; set; }
         private long Time { get; }
 
 
-        public Test(int [] values)
+        public Treatment(int [] values)
         {
             Algorithm = values[0];
             Datatype = values[1];
@@ -36,6 +37,7 @@ namespace ExperimentsDesign.Model
             return 10;
         }
 
+        /*
         private T[] sort (T[] array)
         {
             return new T[2];
@@ -49,6 +51,6 @@ namespace ExperimentsDesign.Model
         {
             return new T[2];
         }
-
+        */
     }
 }

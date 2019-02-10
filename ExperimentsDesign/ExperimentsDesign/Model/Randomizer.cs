@@ -12,6 +12,7 @@ namespace ExperimentsDesign.Model
             array = new T[size];
         }
 
+        /*
         public T[] random()
         {
             if (array.GetType == ) { 
@@ -22,5 +23,6 @@ namespace ExperimentsDesign.Model
                 return array;
             }
         }
+        */
     }
 }
