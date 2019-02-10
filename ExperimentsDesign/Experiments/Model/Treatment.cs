@@ -7,27 +7,35 @@ namespace Experiments.Model
 
     public class Treatment
     {
+        public const int SELECTION_SORT = 1;
+        public const int INSERTION_SORT = 2;
 
-        public const int LEN_1 = 100;
-        public const int LEN_2 = 1000;
-        public const int LEN_3 = 10000;
+        public const int INT_32 = 1;
+        public const int STRING = 2;
+        public const int DOUBLE = 3;
+        public const int OBJECT = 4;
 
-        private int Algorithm { get; set; }
-        private int Datatype {get; set; }
-        private int State {get; set; }
-        private int Length { get; set; }
-        //private T[] Array { get; set; }
-        private long Time { get; }
+        public const int NOT_ORDERED = 1;
+        public const int ASCENDING_ORDER = 2;
+        public const int DESCENDING_ORDER = 3;
+
+        public static readonly int[] SIZES = new int[] { 100, 1000, 10000 };
+
+        private int algorithm;
+        private int datatype;
+        private int state;
+        private int length;
+        private long time;
 
         private Boolean isDone { get; set; }
 
 
         public Treatment(int [] values)
         {
-            Algorithm = values[0];
-            Datatype = values[1];
-            State = values[2];
-            Length = values[3];
+            algorithm = values[0];
+            datatype = values[1];
+            state = values[2];
+            length = values[3];
             isDone = false;
         }
 
