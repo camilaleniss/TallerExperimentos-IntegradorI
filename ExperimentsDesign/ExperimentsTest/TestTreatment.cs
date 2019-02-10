@@ -32,17 +32,17 @@ namespace ExperimentsTest
 
         public int[] SetUpParameter1()
         {
-            return new int[] { 3, 6, 8, 1, 5, 4, 7 };
+            return new int [] { 3, 6, 8, 1, 5, 4, 7 };
         }
 
         public int[] SetUpParameter2()
         {
-            return new int[] { 7, 6, 5, 4, 3, 2, 1 };
+            return new int [] { 7, 6, 5, 4, 3, 2, 1 };
         }
 
         public int[] SetUpParameter3()
         {
-            return new int[] { 1, 2, 2, 3, 4, 5, 6 };
+            return new int [] { 1, 2, 2, 3, 4, 5, 6 };
         }
 
         [TestMethod]
@@ -79,7 +79,7 @@ namespace ExperimentsTest
             double previous = array[0];
             for (int i = 1; i < array.Length; i++)
             {
-            
+
                 Assert.IsTrue(previous <= array[i]);
                 previous = array[i];
             }
@@ -98,7 +98,7 @@ namespace ExperimentsTest
         [TestMethod]
         public void TestSorts()
         {
-            Treatment trt = new Treatment(new int[] { 1, 1, 1, 1 });
+            Treatment trt = new Treatment(new int []{ 1, 1, 1, 1 });
 
             //Test1
             trt.array = SetUpParameter1();

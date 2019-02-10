@@ -28,7 +28,15 @@ namespace Experiments.Model
 
         public const int REPETITIONS = 10;
 
+<<<<<<< HEAD
         public static readonly int[] SIZES = new int[] { 0, 100, 1000, 10000 };
+=======
+        private int algorithm { get; }
+        private int datatype { get; }
+        private int state { get; }
+        private int length { get; }
+        private dynamic Array { get; set; }
+>>>>>>> 08e846af9308f7a79b657bafdc3d1891f0331c76
 
         public int algorithm { get; }
         public int datatype { get; }
