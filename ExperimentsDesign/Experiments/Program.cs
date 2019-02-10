@@ -17,6 +17,7 @@ namespace Experiments
             int[,] matrix = exp.InitMatrixTests();
             string ruta = "..\\..\\respond.txt";
             writeRespuesta(matrix, ruta);
+            exp.WriteCSV();
         }
 
         
