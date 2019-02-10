@@ -30,6 +30,21 @@ namespace ExperimentsTest
             treat = new Treatment(new int[] { 1, 3, 3, 3 });
         }
 
+        public int[] SetUpParameter1()
+        {
+            return new int { 3, 6, 8, 1, 5, 4, 7 };
+        }
+
+        public int[] SetUpParameter2()
+        {
+            return new int { 7, 6, 5, 4, 3, 2, 1 };
+        }
+
+        public int[] SetUpParameter3()
+        {
+            return new int { 1, 2, 2, 3, 4, 5, 6 };
+        }
+
         [TestMethod]
         public void TestInitArray()
         {
@@ -59,10 +74,10 @@ namespace ExperimentsTest
             isOrderedDescendant(treat.array);
         }
 
-        public void isOrderedAscendant(double [] array)
+        public void isOrderedAscendant(double[] array)
         {
             double previous = array[0];
-            for (int i=1; i<array.Length; i++)
+            for (int i = 1; i < array.Length; i++)
             {
                 Assert.True(previous <= array[i]);
                 previous = array[i];
@@ -78,5 +93,46 @@ namespace ExperimentsTest
                 previous = array[i];
             }
         }
+
+        [TestMethod]
+        public void TestSorts()
+        {
+            Treatment trt = new Treatment(new int { 1, 1, 1, 1 });
+
+            //Test1
+            trt.Array = SetUpParameter1();
+            trt.SelectionSort();
+            isOrderedAscendant(trt.Array);
+
+            //Test2
+            trt.Array = SetUpParameter2();
+            trt.SelectionSort();
+            isOrderedAscendant(trt.Array);
+
+            //Test3
+            trt.Array = SetUpParameter3();
+            trt.SelectionSort();
+            isOrderedAscendant(trt.Array);
+
+            //Test4
+            trt.Array = SetUpParameter1();
+            trt.InsertionSort();
+            isOrderedAscendant(trt.Array);
+
+            //Test5
+            trt.Array = SetUpParameter2();
+            trt.InsertionSort();
+            isOrderedAscendant(trt.Array);
+
+            //Test5
+            trt.Array = SetUpParameter3();
+            trt.InsertionSort();
+            isOrderedAscendant(trt.Array);
+
+            //Test6
+
+            //Test7
+        }
+
     }
 }
