@@ -19,11 +19,13 @@ namespace Experiments
             writeRespuesta(matrix, ruta);
         }
 
+        
+
         public static void writeRespuesta(int[,] matrix, string ruta)
         {
             try
             {
-                StreamWriter sw = new StreamWriter(ruta, true);
+                StreamWriter sw = new StreamWriter(ruta, false);
                 for (int f = 0; f < matrix.GetLength(0); f++)
                 {
                     for (int c = 0; c < matrix.GetLength(1); c++)

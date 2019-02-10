@@ -9,11 +9,15 @@ namespace ExperimentsTest
     {
         private Experiment exp;
 
-        [TestMethod]
-        public void TestMethod1()
+        private void SetupScenario1()
         {
-            
-            
+            exp = new Experiment();
+        }
+
+        [TestMethod]
+        public void TestGetNextTreatment()
+        {
+            SetupScenario1();
         }
     }
 }

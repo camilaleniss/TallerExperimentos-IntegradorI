@@ -4,13 +4,14 @@ using System.Text;
 
 namespace Experiments.Model
 {
-    /*
-    public const int LEN1 = 10;
-    public const int LEN2 = 100;
-    public const int LEN3 = 1000;
-    */
+
     public class Treatment
     {
+
+        public const int LEN_1 = 100;
+        public const int LEN_2 = 1000;
+        public const int LEN_3 = 10000;
+
         private int Algorithm { get; set; }
         private int Datatype {get; set; }
         private int State {get; set; }
