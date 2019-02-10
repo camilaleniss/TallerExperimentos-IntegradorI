@@ -32,7 +32,7 @@ namespace Experiments.Model
         private int datatype { get; }
         private int state { get; }
         private int length { get; }
-        private dynamic array { get; set; }
+        private dynamic Array { get; set; }
 
 
         public Treatment(int[] values)
