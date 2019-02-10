@@ -1,4 +1,5 @@
 ﻿using System;
+using Experiments.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ExperimentsTest
@@ -12,7 +13,7 @@ namespace ExperimentsTest
         public void TestMethod1()
         {
             
-            }
+            
         }
     }
 }
