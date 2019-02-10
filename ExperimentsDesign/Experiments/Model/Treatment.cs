@@ -28,12 +28,11 @@ namespace Experiments.Model
 
         public static readonly int[] SIZES = new int[] { 0, 100, 1000, 10000 };
 
-        private int algorithm { get; }
-        private int datatype { get; }
-        private int state { get; }
-        private int length { get; }
-        private dynamic array { get; set; }
-
+        public int algorithm { get; }
+        public int datatype { get; }
+        public int state { get; }
+        public int length { get; }
+        public dynamic array { get; set; }
 
         public Treatment(int[] values)
         {

@@ -32,17 +32,17 @@ namespace ExperimentsTest
 
         public int[] SetUpParameter1()
         {
-            return new int { 3, 6, 8, 1, 5, 4, 7 };
+            return new int[] { 3, 6, 8, 1, 5, 4, 7 };
         }
 
         public int[] SetUpParameter2()
         {
-            return new int { 7, 6, 5, 4, 3, 2, 1 };
+            return new int[] { 7, 6, 5, 4, 3, 2, 1 };
         }
 
         public int[] SetUpParameter3()
         {
-            return new int { 1, 2, 2, 3, 4, 5, 6 };
+            return new int[] { 1, 2, 2, 3, 4, 5, 6 };
         }
 
         [TestMethod]
@@ -79,7 +79,8 @@ namespace ExperimentsTest
             double previous = array[0];
             for (int i = 1; i < array.Length; i++)
             {
-                Assert.True(previous <= array[i]);
+            
+                Assert.IsTrue(previous <= array[i]);
                 previous = array[i];
             }
         }
@@ -89,7 +90,7 @@ namespace ExperimentsTest
             double previous = array[0];
             for (int i = 1; i < array.Length; i++)
             {
-                Assert.True(previous >= array[i]);
+                Assert.IsTrue(previous >= array[i]);
                 previous = array[i];
             }
         }
@@ -97,37 +98,37 @@ namespace ExperimentsTest
         [TestMethod]
         public void TestSorts()
         {
-            Treatment trt = new Treatment(new int { 1, 1, 1, 1 });
+            Treatment trt = new Treatment(new int[] { 1, 1, 1, 1 });
 
             //Test1
-            trt.Array = SetUpParameter1();
+            trt.array = SetUpParameter1();
             trt.SelectionSort();
-            isOrderedAscendant(trt.Array);
+            isOrderedAscendant(trt.array);
 
             //Test2
-            trt.Array = SetUpParameter2();
+            trt.array = SetUpParameter2();
             trt.SelectionSort();
-            isOrderedAscendant(trt.Array);
+            isOrderedAscendant(trt.array);
 
             //Test3
-            trt.Array = SetUpParameter3();
+            trt.array = SetUpParameter3();
             trt.SelectionSort();
-            isOrderedAscendant(trt.Array);
+            isOrderedAscendant(trt.array);
 
             //Test4
-            trt.Array = SetUpParameter1();
+            trt.array = SetUpParameter1();
             trt.InsertionSort();
-            isOrderedAscendant(trt.Array);
+            isOrderedAscendant(trt.array);
 
             //Test5
-            trt.Array = SetUpParameter2();
+            trt.array = SetUpParameter2();
             trt.InsertionSort();
-            isOrderedAscendant(trt.Array);
+            isOrderedAscendant(trt.array);
 
             //Test5
-            trt.Array = SetUpParameter3();
+            trt.array = SetUpParameter3();
             trt.InsertionSort();
-            isOrderedAscendant(trt.Array);
+            isOrderedAscendant(trt.array);
 
             //Test6
 
