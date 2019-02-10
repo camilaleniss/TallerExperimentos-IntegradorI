@@ -126,6 +126,46 @@ namespace Experiments.Model
             return 10;
         }
 
+        public void InsertionSort()
+        {
+            for(int i = 0; i < array.Count; i++)
+            {
+                for(int j = i ; j >= 0 && array[j-1].CompareTo(array[j])>0; j--)
+                {
+                    if (array[j - 1].CompareTo(array[j]) > 0)
+                    {
+                        dynamic temp = array[j - 1];
+                        array[j - 1] = array[j];
+                        array[j] = temp;
+                    }
+                }
+            }
+        }
+        public void SelectionSort()
+        {
+            int pos_min = 0;
+            dynamic temp ;
+
+            for(int i = 0; i < array.Count; i++)
+            {
+                pos_min = i;
+                for (int j = i + 1; j < array.Count; j++)
+                {
+                    if (array[j].CompareTo(array[i])<0)
+                    {
+                        pos_min = j;
+                        if (pos_min != i)
+                        {
+                            temp = array[i];
+                            array[i] = array[j];
+                            array[j] = temp;
+                        }
+                    }
+                }
+            }
+        }
+
+
         /*
         private T[] sort (T[] array)
         {
