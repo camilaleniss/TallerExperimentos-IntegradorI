@@ -6,7 +6,7 @@ namespace ExperimentsDesign.Model
 {
     public class Experiment
     {
-        private List<Treatment> treatments { get; set; }
+        private List<Treatment> treatments { get; set;}
 
         public Experiment()
         {
@@ -82,7 +82,10 @@ namespace ExperimentsDesign.Model
             }
             return matrix;
         }
-
+        /// <summary>
+        /// Creates 72 Treatments where the values of each treatments are a row of the matrix
+        /// </summary>
+        /// <param name="matrix"></param>
         public void CreateTreatments(int[,] matrix)
         {
             int[] array = new int[4];
@@ -97,10 +100,9 @@ namespace ExperimentsDesign.Model
             }
         }
 
-        public void ExecuteTest(Treatment test)
+        public void ExecuteTreatment(Treatment test)
         {
-
-            test.ExecuteTest();
+            long time = test.ExecuteTest();
         }
 
         public void WriteCVS()

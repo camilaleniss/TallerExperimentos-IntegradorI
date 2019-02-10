@@ -18,6 +18,8 @@ namespace ExperimentsDesign.Model
         //private T[] Array { get; set; }
         private long Time { get; }
 
+        private Boolean isDone { get; set; }
+
 
         public Treatment(int [] values)
         {
@@ -25,6 +27,7 @@ namespace ExperimentsDesign.Model
             Datatype = values[1];
             State = values[2];
             Length = values[3];
+            isDone = false;
         }
 
         public void initArray()
@@ -34,6 +37,7 @@ namespace ExperimentsDesign.Model
 
         public long ExecuteTest()
         {
+            //Devuelve el tiempo que tardó en ordenar el arreglo
             return 10;
         }
 
