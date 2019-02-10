@@ -117,6 +117,7 @@ namespace Experiments.Model
                     {
                         line.Append("," + times[i]);
                     }
+                    Console.WriteLine(line.ToString());
                     sw.WriteLine(line.ToString());
                 }
 

@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using Experiments.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 
 namespace ExperimentsTest
 {
     [TestClass]
-    public class UnitTest1
+    public class TestTreatment
     {
 
         private Treatment treat;
@@ -30,19 +32,19 @@ namespace ExperimentsTest
             treat = new Treatment(new int[] { 1, 3, 3, 3 });
         }
 
-        public int[] SetUpParameter1()
+        public List<int> SetUpParameter1()
         {
-            return new int [] { 3, 6, 8, 1, 5, 4, 7 };
+            return new List<int> { 3, 6, 8, 1, 5, 4, 7 };
         }
 
-        public int[] SetUpParameter2()
+        public List<int> SetUpParameter2()
         {
-            return new int [] { 7, 6, 5, 4, 3, 2, 1 };
+            return new List<int> { 7, 6, 5, 4, 3, 2, 1 };
         }
 
-        public int[] SetUpParameter3()
+        public List<int> SetUpParameter3()
         {
-            return new int [] { 1, 2, 2, 3, 4, 5, 6 };
+            return new List<int>{ 1, 2, 2, 3, 4, 5, 6 };
         }
 
         [TestMethod]
@@ -50,47 +52,44 @@ namespace ExperimentsTest
         {
             //Test1
             SetUpStage1();
-            treat.InitArray();
             Assert.AreEqual(treat.array.Count, 10);
-            Assert.IsInstanceOfType(treat.array, Int32);
+            Assert.IsInstanceOfType(treat.array[0], typeof(Int32));
 
             //Test2
             SetUpStage2();
-            treat.InitArray();
             Assert.AreEqual(treat.array.Count, 10);
-            Assert.IsInstanceOfType(treat.array, String);
+            Assert.IsInstanceOfType(treat.array[0], typeof(String));
 
             //Test3
             SetUpStage3();
-            treat.InitArray();
             Assert.AreEqual(treat.array.Count, 100);
-            Assert.IsInstanceOfType(treat.array, Double);
+            Assert.IsInstanceOfType(treat.array[0], typeof(Double));
             isOrderedAscendant(treat.array);
 
             //Test4
             SetUpStage4();
             Assert.AreEqual(treat.array.Count, 1000);
-            Assert.IsInstanceOfType(treat.array, Double);
+            Assert.IsInstanceOfType(treat.array[0], typeof(Double));
             isOrderedDescendant(treat.array);
         }
 
-        public void isOrderedAscendant(double[] array)
+        public void isOrderedAscendant(dynamic array)
         {
-            double previous = array[0];
-            for (int i = 1; i < array.Length; i++)
+            dynamic previous = array[0];
+            for (int i = 1; i < array.Count; i++)
             {
 
-                Assert.IsTrue(previous <= array[i]);
+                Assert.IsTrue(previous.CompareTo(array[i]) <= 0);
                 previous = array[i];
             }
         }
 
-        public void isOrderedDescendant(double[] array)
+        public void isOrderedDescendant(dynamic array)
         {
-            double previous = array[0];
-            for (int i = 1; i < array.Length; i++)
+            dynamic previous = array[0];
+            for (int i = 1; i < array.Count; i++)
             {
-                Assert.IsTrue(previous >= array[i]);
+                Assert.IsTrue(previous.CompareTo(array[i]) >= 0);
                 previous = array[i];
             }
         }

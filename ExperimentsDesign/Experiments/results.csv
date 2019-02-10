@@ -1,73 +1,73 @@
-Sorting algorithm,Data type,Values state,Array size,Time (ms)
-Selection sort,Int 32,Not ordered,100,0
-Selection sort,Int 32,Not ordered,1000,0
-Selection sort,Int 32,Not ordered,10000,0
-Selection sort,Int 32,Ascending order,100,0
-Selection sort,Int 32,Ascending order,1000,0
-Selection sort,Int 32,Ascending order,10000,0
-Selection sort,Int 32,Descending order,100,0
-Selection sort,Int 32,Descending order,1000,0
-Selection sort,Int 32,Descending order,10000,0
-Selection sort,String,Not ordered,100,0
-Selection sort,String,Not ordered,1000,0
-Selection sort,String,Not ordered,10000,0
-Selection sort,String,Ascending order,100,0
-Selection sort,String,Ascending order,1000,0
-Selection sort,String,Ascending order,10000,0
-Selection sort,String,Descending order,100,0
-Selection sort,String,Descending order,1000,0
-Selection sort,String,Descending order,10000,0
-Selection sort,Double,Not ordered,100,0
-Selection sort,Double,Not ordered,1000,0
-Selection sort,Double,Not ordered,10000,0
-Selection sort,Double,Ascending order,100,0
-Selection sort,Double,Ascending order,1000,0
-Selection sort,Double,Ascending order,10000,0
-Selection sort,Double,Descending order,100,0
-Selection sort,Double,Descending order,1000,0
-Selection sort,Double,Descending order,10000,0
-Selection sort,Int 64,Not ordered,100,0
-Selection sort,Int 64,Not ordered,1000,0
-Selection sort,Int 64,Not ordered,10000,0
-Selection sort,Int 64,Ascending order,100,0
-Selection sort,Int 64,Ascending order,1000,0
-Selection sort,Int 64,Ascending order,10000,0
-Selection sort,Int 64,Descending order,100,0
-Selection sort,Int 64,Descending order,1000,0
-Selection sort,Int 64,Descending order,10000,0
-Insertion sort,Int 32,Not ordered,100,0
-Insertion sort,Int 32,Not ordered,1000,0
-Insertion sort,Int 32,Not ordered,10000,0
-Insertion sort,Int 32,Ascending order,100,0
-Insertion sort,Int 32,Ascending order,1000,0
-Insertion sort,Int 32,Ascending order,10000,0
-Insertion sort,Int 32,Descending order,100,0
-Insertion sort,Int 32,Descending order,1000,0
-Insertion sort,Int 32,Descending order,10000,0
-Insertion sort,String,Not ordered,100,0
-Insertion sort,String,Not ordered,1000,0
-Insertion sort,String,Not ordered,10000,0
-Insertion sort,String,Ascending order,100,0
-Insertion sort,String,Ascending order,1000,0
-Insertion sort,String,Ascending order,10000,0
-Insertion sort,String,Descending order,100,0
-Insertion sort,String,Descending order,1000,0
-Insertion sort,String,Descending order,10000,0
-Insertion sort,Double,Not ordered,100,0
-Insertion sort,Double,Not ordered,1000,0
-Insertion sort,Double,Not ordered,10000,0
-Insertion sort,Double,Ascending order,100,0
-Insertion sort,Double,Ascending order,1000,0
-Insertion sort,Double,Ascending order,10000,0
-Insertion sort,Double,Descending order,100,0
-Insertion sort,Double,Descending order,1000,0
-Insertion sort,Double,Descending order,10000,0
-Insertion sort,Int 64,Not ordered,100,0
-Insertion sort,Int 64,Not ordered,1000,0
-Insertion sort,Int 64,Not ordered,10000,0
-Insertion sort,Int 64,Ascending order,100,0
-Insertion sort,Int 64,Ascending order,1000,0
-Insertion sort,Int 64,Ascending order,10000,0
-Insertion sort,Int 64,Descending order,100,0
-Insertion sort,Int 64,Descending order,1000,0
-Insertion sort,Int 64,Descending order,10000,0
+Sorting algorithm,Data type,Values state,Array size,Repetition 1,Repetition 2,Repetition 3,Repetition 4,Repetition 5,Repetition 6,Repetition 7,Repetition 8,Repetition 9,Repetition 10
+Selection sort,Int 32,Not ordered,10,11600,6,2,3,5,3,7,3,5,3
+Selection sort,Int 32,Not ordered,100,578,411,418,424,420,431,426,414,426,4010
+Selection sort,Int 32,Not ordered,1000,52600,36301,31154,32933,31443,31241,33190,32633,31424,31132
+Selection sort,Int 32,Ascending order,10,6,2,4,3,3,3,3,3,3,3
+Selection sort,Int 32,Ascending order,100,324,335,445,361,478,300,303,313,300,300
+Selection sort,Int 32,Ascending order,1000,32514,32467,36179,32477,32172,33511,31121,30362,29828,29846
+Selection sort,Int 32,Descending order,10,8,3,3,3,3,3,3,3,2,3
+Selection sort,Int 32,Descending order,100,518,296,298,298,297,298,297,298,297,296
+Selection sort,Int 32,Descending order,1000,53451,30067,31018,30240,29629,29590,30189,31192,30256,40463
+Selection sort,String,Not ordered,10,2929,8,8,7,7,8,7,7,8,8
+Selection sort,String,Not ordered,100,942,775,781,782,781,778,776,785,781,777
+Selection sort,String,Not ordered,1000,100175,78615,78984,78585,79089,80322,78753,78520,78598,79920
+Selection sort,String,Ascending order,10,11,7,7,8,7,8,8,7,7,8
+Selection sort,String,Ascending order,100,793,777,776,776,778,775,778,777,777,814
+Selection sort,String,Ascending order,1000,85085,91356,82496,79388,79393,79522,78868,83491,78909,79160
+Selection sort,String,Descending order,10,15,7,7,7,7,7,8,7,7,7
+Selection sort,String,Descending order,100,1071,766,767,768,767,880,766,767,777,776
+Selection sort,String,Descending order,1000,112165,79975,81344,80257,80557,81173,80290,79606,79595,85302
+Selection sort,Double,Not ordered,10,2895,3,2,3,3,3,2,3,3,3
+Selection sort,Double,Not ordered,100,457,309,309,312,309,309,309,308,309,308
+Selection sort,Double,Not ordered,1000,43310,30611,30688,30667,31218,30711,30744,32635,31141,31382
+Selection sort,Double,Ascending order,10,4,3,7,3,3,3,3,2,3,3
+Selection sort,Double,Ascending order,100,315,309,312,312,310,310,309,310,315,309
+Selection sort,Double,Ascending order,1000,30823,32757,33832,32313,30997,35166,35094,32210,46069,43590
+Selection sort,Double,Descending order,10,8,3,2,3,2,11,3,3,3,3
+Selection sort,Double,Descending order,100,523,308,319,344,349,339,352,330,546,315
+Selection sort,Double,Descending order,1000,60563,30807,31976,31437,31406,31372,39893,31713,31680,31117
+Selection sort,Int 64,Not ordered,10,3028,3,3,3,3,3,3,3,3,4
+Selection sort,Int 64,Not ordered,100,446,307,308,307,307,520,310,318,308,307
+Selection sort,Int 64,Not ordered,1000,43984,31021,31356,30922,31558,31442,31291,31083,31224,31319
+Selection sort,Int 64,Ascending order,10,4,3,3,3,3,3,3,3,3,3
+Selection sort,Int 64,Ascending order,100,320,310,309,310,307,401,306,306,303,305
+Selection sort,Int 64,Ascending order,1000,31179,31777,31360,30804,31137,30986,31189,31740,31935,30878
+Selection sort,Int 64,Descending order,10,7,3,3,3,3,3,3,3,3,3
+Selection sort,Int 64,Descending order,100,527,311,311,434,310,308,310,308,309,315
+Selection sort,Int 64,Descending order,1000,52279,30774,31187,33076,31382,31087,32316,30882,31163,31307
+Insertion sort,Int 32,Not ordered,10,8030,0,0,1,0,0,0,0,0,0
+Insertion sort,Int 32,Not ordered,100,344,7,7,7,7,7,7,7,7,7
+Insertion sort,Int 32,Not ordered,1000,34363,75,74,74,73,75,74,74,79,73
+Insertion sort,Int 32,Ascending order,10,1,0,0,0,0,0,6,0,0,0
+Insertion sort,Int 32,Ascending order,100,11,7,7,7,7,7,7,7,7,7
+Insertion sort,Int 32,Ascending order,1000,79,74,73,73,72,73,110,74,73,73
+Insertion sort,Int 32,Descending order,10,8,0,0,1,0,0,0,0,0,0
+Insertion sort,Int 32,Descending order,100,676,7,7,7,7,7,7,7,7,7
+Insertion sort,Int 32,Descending order,1000,67752,72,72,72,73,71,72,72,72,72
+Insertion sort,String,Not ordered,10,3391,1,1,1,1,1,1,1,1,1
+Insertion sort,String,Not ordered,100,819,19,18,18,18,18,18,18,18,18
+Insertion sort,String,Not ordered,1000,78794,222,203,199,200,200,199,196,195,196
+Insertion sort,String,Ascending order,10,6,1,1,1,1,1,1,1,1,1
+Insertion sort,String,Ascending order,100,37,19,19,18,18,18,18,18,18,20
+Insertion sort,String,Ascending order,1000,291,199,197,196,196,196,195,196,195,197
+Insertion sort,String,Descending order,10,18,1,1,1,1,2,1,1,1,1
+Insertion sort,String,Descending order,100,1620,19,18,18,18,18,18,18,18,18
+Insertion sort,String,Descending order,1000,161561,203,196,197,196,196,196,195,196,196
+Insertion sort,Double,Not ordered,10,3474,0,0,0,0,0,0,1,0,0
+Insertion sort,Double,Not ordered,100,339,7,7,7,7,7,7,7,7,7
+Insertion sort,Double,Not ordered,1000,37077,75,74,75,74,74,75,74,114,74
+Insertion sort,Double,Ascending order,10,2,0,0,0,0,0,0,0,1,0
+Insertion sort,Double,Ascending order,100,8,7,7,7,7,7,12,7,7,8
+Insertion sort,Double,Ascending order,1000,80,76,75,74,75,75,74,74,74,74
+Insertion sort,Double,Descending order,10,8,0,0,0,0,0,1,0,0,0
+Insertion sort,Double,Descending order,100,743,7,7,7,9,7,7,7,8,7
+Insertion sort,Double,Descending order,1000,73254,76,73,74,76,74,74,75,76,87
+Insertion sort,Int 64,Not ordered,10,4088,1,0,0,0,0,0,0,0,4
+Insertion sort,Int 64,Not ordered,100,334,7,7,7,7,7,7,7,7,7
+Insertion sort,Int 64,Not ordered,1000,35809,73,73,73,74,76,74,73,72,73
+Insertion sort,Int 64,Ascending order,10,1,0,0,0,0,0,0,0,1,0
+Insertion sort,Int 64,Ascending order,100,15,7,7,7,7,7,7,7,7,7
+Insertion sort,Int 64,Ascending order,1000,77,75,293,90,87,74,72,83,79,74
+Insertion sort,Int 64,Descending order,10,8,0,0,0,0,0,0,0,0,0
+Insertion sort,Int 64,Descending order,100,711,7,7,7,7,7,7,8,7,7
+Insertion sort,Int 64,Descending order,1000,73787,75,73,72,91,87,74,73,73,74
