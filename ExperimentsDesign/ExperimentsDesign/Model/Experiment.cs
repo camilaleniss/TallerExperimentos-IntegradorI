@@ -10,7 +10,7 @@ namespace ExperimentsDesign.Model
 
         public Experiment()
         {
-
+            treatments = new List<Treatment>();
         }
 
         public void ExecuteExperiment()
@@ -20,10 +20,13 @@ namespace ExperimentsDesign.Model
 
         public void InitTests()
         {
-            InitMatrixTests();
-            CreateTests();
+            int [,] matrix = InitMatrixTests();
+            CreateTreatments(matrix);
         }
-
+        /// <summary>
+        /// Initializes the treatements matrix as shown in the report of Experiments Design 
+        /// </summary>
+        /// <returns></returns>
         public int[,] InitMatrixTests()
         {
             int[,] matrix = new int[72,4];
@@ -80,9 +83,18 @@ namespace ExperimentsDesign.Model
             return matrix;
         }
 
-        public void CreateTests()
+        public void CreateTreatments(int[,] matrix)
         {
-
+            int[] array = new int[4];
+            for (int i = 0; i<matrix.GetLength(0); i++)
+            {
+                for (int j=0; j<4; j++)
+                {
+                    array[j] = matrix[i, j];
+                }
+                Treatment treatment = new Treatment(array);
+                treatments.Add(treatment);
+            }
         }
 
         public void ExecuteTest(Treatment test)
