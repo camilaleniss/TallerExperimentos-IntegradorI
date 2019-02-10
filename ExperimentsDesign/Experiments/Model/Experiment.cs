@@ -13,6 +13,7 @@ namespace Experiments.Model
         public Experiment()
         {
             treatments = new List<Treatment>();
+            InitTests();
         }
 
         public void ExecuteExperiment()

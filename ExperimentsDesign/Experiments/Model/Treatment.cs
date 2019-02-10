@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace Experiments.Model
@@ -25,18 +26,17 @@ namespace Experiments.Model
 
         public const int MAX_STRING_SIZE = 1000;
 
-        public static readonly int[] SIZES = new int[] {0, 100, 1000, 10000 };
+        public static readonly int[] SIZES = new int[] { 0, 100, 1000, 10000 };
 
         private int algorithm;
         private int datatype;
         private int state;
         private int length;
-        private long time;
 
         private dynamic array;
 
 
-        public Treatment(int [] values)
+        public Treatment(int[] values)
         {
             algorithm = values[0];
             datatype = values[1];
@@ -49,7 +49,7 @@ namespace Experiments.Model
 
         private void InitArray()
         {
-            switch(datatype)
+            switch (datatype)
             {
                 case INT_32:
                     array = new List<Int32>();
@@ -66,29 +66,29 @@ namespace Experiments.Model
                 case INT_64:
                     array = new List<Int64>();
                     break;
-            }            
+            }
         }
 
         private void FillArray(Random random)
         {
-            for (int i = 0; i < array.Count; i++)
+            for (int i = 0; i < SIZES[length]; i++)
             {
-                switch (SIZES[length])
+                switch (datatype)
                 {
                     case INT_32:
-                        array[i] = random.Next(MIN_INT, MAX_INT);
+                        array.Add(random.Next(MAX_INT - MIN_INT) + MIN_INT);
                         break;
 
                     case STRING:
-                        array[i] = GetRandomString(random);
+                        array.Add(GetRandomString(random));
                         break;
 
                     case DOUBLE:
-                        array[i] = random.NextDouble() * (MAX_INT - MIN_INT) + MIN_INT;
+                        array.Add(random.NextDouble() * (MAX_INT - MIN_INT) + MIN_INT);
                         break;
 
                     case INT_64:
-                        array[i] = (long)random.Next(MIN_INT, MAX_INT);
+                        array.Add((long)random.Next(MAX_INT - MIN_INT) + MIN_INT);
                         break;
                 }
             }
@@ -122,24 +122,32 @@ namespace Experiments.Model
 
         public long ExecuteTest()
         {
-            //Devuelve el tiempo que tardó en ordenar el arreglo
-            return 10;
+            Stopwatch sw = Stopwatch.StartNew();
+            switch (algorithm)
+            {
+                case SELECTION_SORT:
+                    sw.Start();
+                    SelectionSort();
+                    sw.Stop();
+                    break;
+                case INSERTION_SORT:
+                    sw.Start();
+                    InsertionSort();
+                    sw.Stop();
+                    break;
+            }
+            return sw.ElapsedMilliseconds;
         }
 
-        /*
-        private T[] sort (T[] array)
+        private void SelectionSort()
         {
-            return new T[2];
-        }
-        private T[] SelectionSort(T[] array)
-        {
-            return new T[2];
+
         }
 
-        private T[] InsertionSort(T[] array)
+        private void InsertionSort()
         {
-            return new T[2];
+
         }
-        */
+
     }
 }
