@@ -7,6 +7,7 @@ namespace Experiments.Model
 {
     public class Experiment
     {
+        public const string CSV_ROUTE = "..\\..\\results.csv";
         public static readonly int[] LEVELS = new int[] { 2, 4, 3, 3 };
 
         private List<Treatment> treatments { get; set; }
@@ -100,7 +101,7 @@ namespace Experiments.Model
             try
             {
 
-                StreamWriter sw = new StreamWriter("..\\..\\results.csv", false);
+                StreamWriter sw = new StreamWriter(CSV_ROUTE, false);
                 sw.WriteLine("Sorting algorithm,Data type,Values state,Array size,Time (ms)");
                 foreach (Treatment treatment in treatments)
                 {
