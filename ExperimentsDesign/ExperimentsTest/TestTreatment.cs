@@ -51,25 +51,25 @@ namespace ExperimentsTest
             //Test1
             SetUpStage1();
             treat.InitArray();
-            Assert.AreEqual(treat.array.length, 10);
+            Assert.AreEqual(treat.array.Count, 10);
             Assert.IsInstanceOfType(treat.array, Int32);
 
             //Test2
             SetUpStage2();
             treat.InitArray();
-            Assert.AreEqual(treat.array.length, 10);
+            Assert.AreEqual(treat.array.Count, 10);
             Assert.IsInstanceOfType(treat.array, String);
 
             //Test3
             SetUpStage3();
             treat.InitArray();
-            Assert.AreEqual(treat.array.length, 100);
+            Assert.AreEqual(treat.array.Count, 100);
             Assert.IsInstanceOfType(treat.array, Double);
             isOrderedAscendant(treat.array);
 
             //Test4
             SetUpStage4();
-            Assert.AreEqual(treat.array.length, 1000);
+            Assert.AreEqual(treat.array.Count, 1000);
             Assert.IsInstanceOfType(treat.array, Double);
             isOrderedDescendant(treat.array);
         }
