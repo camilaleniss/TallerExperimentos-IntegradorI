@@ -26,6 +26,8 @@ namespace Experiments.Model
 
         public const int MAX_STRING_SIZE = 1000;
 
+        public const int REPETITIONS = 10;
+
         public static readonly int[] SIZES = new int[] { 0, 100, 1000, 10000 };
 
         public int algorithm { get; }
@@ -118,7 +120,17 @@ namespace Experiments.Model
             return sb.ToString();
         }
 
-        public long ExecuteTest()
+        public long[] ExecuteTest()
+        {
+            long[] result = new long[REPETITIONS];
+            for (int i = 0; i < REPETITIONS; i++)
+            {
+                result[i] = DoRepetition();
+            }
+            return result;
+        }
+
+        private long DoRepetition()
         {
             Stopwatch sw = Stopwatch.StartNew();
             switch (algorithm)
@@ -136,7 +148,6 @@ namespace Experiments.Model
             }
             return sw.ElapsedMilliseconds;
         }
-
 
         public void InsertionSort()
         {

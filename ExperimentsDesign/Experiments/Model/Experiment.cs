@@ -102,10 +102,22 @@ namespace Experiments.Model
             {
 
                 StreamWriter sw = new StreamWriter(CSV_ROUTE, false);
-                sw.WriteLine("Sorting algorithm,Data type,Values state,Array size,Time (ms)");
+                StringBuilder header = new StringBuilder("Sorting algorithm,Data type,Values state,Array size");
+                for (int i = 1; i <= Treatment.REPETITIONS; i++)
+                {
+                    header.Append(",Repetition " + i);
+                }
+                sw.WriteLine(header.ToString());
+
                 foreach (Treatment treatment in treatments)
                 {
-                    sw.WriteLine(treatment.ToString() + "," + treatment.ExecuteTest());
+                    StringBuilder line = new StringBuilder(treatment.ToString());
+                    long[] times = treatment.ExecuteTest();
+                    for (int i = 0; i < Treatment.REPETITIONS; i++)
+                    {
+                        line.Append("," + times[i]);
+                    }
+                    sw.WriteLine(line.ToString());
                 }
 
                 sw.Close();
