@@ -36,12 +36,15 @@ namespace Experiments.Model
         public int length { get; }
         public dynamic array { get; set; }
 
+        public Boolean isDone { get; set; }
+
         public Treatment(int[] values)
         {
             algorithm = values[0];
             datatype = values[1];
             state = values[2];
             length = values[3];
+            isDone = false;
 
             InitArray();
             FillArray(new Random());
@@ -127,6 +130,7 @@ namespace Experiments.Model
             {
                 result[i] = DoRepetition();
             }
+            isDone = true;
             return result;
         }
 

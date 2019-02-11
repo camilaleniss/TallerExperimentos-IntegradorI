@@ -10,12 +10,11 @@ namespace Experiments.Model
         public const string CSV_ROUTE = "..\\..\\results.csv";
         public static readonly int[] LEVELS = new int[] { 2, 4, 3, 3 };
 
-        private List<Treatment> treatments { get; set; }
+        public List<Treatment> treatments { get; set; }
 
         public Experiment()
         {
             treatments = new List<Treatment>();
-            InitTests();
         }
 
 
