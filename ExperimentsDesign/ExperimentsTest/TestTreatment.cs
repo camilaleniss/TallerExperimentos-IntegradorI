@@ -52,23 +52,23 @@ namespace ExperimentsTest
         {
             //Test1
             SetUpStage1();
-            Assert.AreEqual(treat.array.Count, 10);
+            Assert.AreEqual(treat.array.Count, 1000);
             Assert.IsInstanceOfType(treat.array[0], typeof(Int32));
 
             //Test2
             SetUpStage2();
-            Assert.AreEqual(treat.array.Count, 10);
+            Assert.AreEqual(treat.array.Count, 1000);
             Assert.IsInstanceOfType(treat.array[0], typeof(String));
 
             //Test3
             SetUpStage3();
-            Assert.AreEqual(treat.array.Count, 100);
+            Assert.AreEqual(treat.array.Count, 2000);
             Assert.IsInstanceOfType(treat.array[0], typeof(Double));
             isOrderedAscendant(treat.array);
 
             //Test4
             SetUpStage4();
-            Assert.AreEqual(treat.array.Count, 1000);
+            Assert.AreEqual(treat.array.Count, 3000);
             Assert.IsInstanceOfType(treat.array[0], typeof(Double));
             isOrderedDescendant(treat.array);
         }
