@@ -233,5 +233,6 @@ namespace Experiments.Model
 
             return sort[this.algorithm] + "," + type[this.datatype] + "," + state[this.state] + "," + SIZES[this.length];
         }
+
     }
 }
