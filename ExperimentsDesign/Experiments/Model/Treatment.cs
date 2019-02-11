@@ -28,7 +28,7 @@ namespace Experiments.Model
 
         public const int REPETITIONS = 10;
 
-        public static readonly int[] SIZES = new int[] { 0, 10, 100, 1000};
+        public static readonly int[] SIZES = new int[] { 0, 1000, 2000, 3000};
 
         public int algorithm { get; }
         public int datatype { get; }
@@ -151,7 +151,7 @@ namespace Experiments.Model
                     break;
             }
             
-            double time = sw.Elapsed.TotalMilliseconds * 1000;
+            double time = sw.Elapsed.TotalMilliseconds;
             return (long)time;
         }
 
