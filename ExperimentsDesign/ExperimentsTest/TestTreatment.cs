@@ -134,5 +134,45 @@ namespace ExperimentsTest
             //Test7
         }
 
+        [TestMethod]
+        public void TestExecuteTest()
+        {
+            Treatment trt;
+            //Test 1
+            trt = new Treatment(new int [] { 1, 1, 1, 1 });
+            trt.ExecuteTest();
+            Assert.IsTrue(trt.isDone);
+            isOrderedAscendant(trt.array);
+
+            //Test 2
+            trt = new Treatment(new int[] { 1, 1, 2, 1 });
+            trt.ExecuteTest();
+            Assert.IsTrue(trt.isDone);
+            isOrderedAscendant(trt.array);
+
+            //Test 3
+            trt = new Treatment(new int[] { 1, 1, 3, 1 });
+            trt.ExecuteTest();
+            Assert.IsTrue(trt.isDone);
+            isOrderedAscendant(trt.array);
+
+            //Test 4
+            trt = new Treatment(new int[] { 1, 1, 1, 2 });
+            trt.ExecuteTest();
+            Assert.IsTrue(trt.isDone);
+            isOrderedAscendant(trt.array);
+
+            //Test 5
+            trt = new Treatment(new int[] { 1, 1, 1, 3 });
+            trt.ExecuteTest();
+            Assert.IsTrue(trt.isDone);
+            isOrderedAscendant(trt.array);
+
+            //Test 6
+            trt = new Treatment(new int[] { 1, 2, 1, 3 });
+            trt.ExecuteTest();
+            Assert.IsTrue(trt.isDone);
+            isOrderedAscendant(trt.array);
+        }
     }
 }
