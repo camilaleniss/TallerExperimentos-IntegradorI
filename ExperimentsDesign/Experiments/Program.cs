@@ -14,6 +14,7 @@ namespace Experiments
         public static void Main(string[] args)
         {
             exp = new Experiment();
+            exp.InitTests();
             int[,] matrix = exp.InitMatrixTests();
             string ruta = "..\\..\\respond.txt";
             writeRespuesta(matrix, ruta);
