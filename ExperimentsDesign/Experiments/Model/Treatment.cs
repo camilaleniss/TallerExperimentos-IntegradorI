@@ -134,8 +134,39 @@ namespace Experiments.Model
             return result;
         }
 
+        private dynamic CloneList()
+        {
+            dynamic clone = new List<Int32>();
+            switch (datatype)
+            {
+                case INT_32:
+                    clone = new List<Int32>();
+                    break;
+
+                case STRING:
+                    clone = new List<String>();
+                    break;
+
+                case DOUBLE:
+                    clone = new List<Double>();
+                    break;
+
+                case INT_64:
+                    clone = new List<Int64>();
+                    break;
+            }
+            foreach (dynamic item in array)
+            {
+                clone.Add(item);
+            }
+            return clone;
+        }
+
         private long DoRepetition()
         {
+
+            dynamic clone = CloneList();
+
             Stopwatch sw = Stopwatch.StartNew();
             switch (algorithm)
             {
@@ -152,6 +183,7 @@ namespace Experiments.Model
             }
             
             double time = sw.Elapsed.TotalMilliseconds;
+            array = clone;
             return (long)time;
         }
 
