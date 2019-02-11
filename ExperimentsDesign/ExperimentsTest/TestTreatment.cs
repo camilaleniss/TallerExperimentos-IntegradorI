@@ -47,6 +47,20 @@ namespace ExperimentsTest
             return new List<int>{ 1, 2, 2, 3, 4, 5, 6 };
         }
 
+        public List<int> SetUpParameter4()
+        {
+            List<int> randomList = new List<int>();
+            Random r = new Random();
+            for(int i = 0; i < 3000; i++)
+            {
+                int randomNumber = r.Next(-1000, 1000);
+                randomList.Add(randomNumber);
+
+            }
+            return randomList;
+        }
+
+   
         [TestMethod]
         public void TestInitArray()
         {
@@ -130,9 +144,55 @@ namespace ExperimentsTest
             isOrderedAscendant(trt.array);
 
             //Test6
+            trt.array = SetUpParameter4();
+            trt.SelectionSort();
+            isOrderedAscendant(trt.array);
 
             //Test7
+            trt.array = SetUpParameter4();
+            trt.InsertionSort();
+            isOrderedAscendant(trt.array);
         }
 
+        [TestMethod]
+        public void TestExecuteTest()
+        {
+            Treatment trt;
+            //Test 1
+            trt = new Treatment(new int [] { 1, 1, 1, 1 });
+            trt.ExecuteTest();
+            Assert.IsTrue(trt.isDone);
+            isOrderedAscendant(trt.array);
+
+            //Test 2
+            trt = new Treatment(new int[] { 1, 1, 2, 1 });
+            trt.ExecuteTest();
+            Assert.IsTrue(trt.isDone);
+            isOrderedAscendant(trt.array);
+
+            //Test 3
+            trt = new Treatment(new int[] { 1, 1, 3, 1 });
+            trt.ExecuteTest();
+            Assert.IsTrue(trt.isDone);
+            isOrderedAscendant(trt.array);
+
+            //Test 4
+            trt = new Treatment(new int[] { 1, 1, 1, 2 });
+            trt.ExecuteTest();
+            Assert.IsTrue(trt.isDone);
+            isOrderedAscendant(trt.array);
+
+            //Test 5
+            trt = new Treatment(new int[] { 1, 1, 1, 3 });
+            trt.ExecuteTest();
+            Assert.IsTrue(trt.isDone);
+            isOrderedAscendant(trt.array);
+
+            //Test 6
+            trt = new Treatment(new int[] { 1, 2, 1, 3 });
+            trt.ExecuteTest();
+            Assert.IsTrue(trt.isDone);
+            isOrderedAscendant(trt.array);
+        }
     }
 }
